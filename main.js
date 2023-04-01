@@ -4,7 +4,7 @@ const request = require("request");
 const https = require("https");
 const { MAILCHIMP_API_KEY, AUDIENCE_ID } = require("./apikeys.js");
 const app = express();
-let port = process.env.PORT;
+let port = process.env.PORT || 3000;
 
 app.use(express.static("public"));
 app.use(bodyParser.urlencoded({ extended: true }));
